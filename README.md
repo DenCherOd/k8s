@@ -152,7 +152,7 @@ Cluster in the context of Kubernetes is a group of computers (nodes) working tog
 <br>
 <br>
 
-## Nods commands
+## Nodes commands
 **Get Node info**
    ```sh
    kubectl get nodes
