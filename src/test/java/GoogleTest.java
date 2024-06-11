@@ -9,15 +9,21 @@ public class GoogleTest {
     private WebDriver driver;
 
     @BeforeTest
-    public void beforeTest() {
-        WebDriverManager.firefoxdriver().setup();  // Эта строка автоматически загрузит правильную версию GeckoDriver
+    private void beforeTest() {
+        WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
     }
 
     @Test
-    public void testGoogleSearch() {
+    private void testGoogleSearch() {
         driver.get("https://www.google.com");
         System.out.println("Page title is: " + driver.getTitle());
         driver.quit();
+    }
+
+    public static void main(String[] args) {
+        GoogleTest googleTest = new GoogleTest();
+        googleTest.beforeTest();
+        googleTest.testGoogleSearch();
     }
 }
